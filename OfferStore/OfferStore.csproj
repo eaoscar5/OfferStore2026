@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59293DFD-620D-4A48-93FA-F7789F26056B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OfferStore</RootNamespace>
+    <AssemblyName>OfferStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo-OfferStore.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="frmCatNegocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatNegocios.Designer.cs">
+      <DependentUpon>frmCatNegocios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatOfertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatOfertas.Designer.cs">
+      <DependentUpon>frmCatOfertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatProductos.Designer.cs">
+      <DependentUpon>frmCatProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatClientes.Designer.cs">
+      <DependentUpon>frmCatClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatVendedores.Designer.cs">
+      <DependentUpon>frmCatVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReseñarNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReseñarNegocio.Designer.cs">
+      <DependentUpon>frmReseñarNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionTipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionTipoUsuario.Designer.cs">
+      <DependentUpon>frmSeleccionTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMenuPrincipal.Designer.cs">
+      <DependentUpon>MDIMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio.cs" />
+    <Compile Include="NegocioComtrolador.cs" />
+    <Compile Include="Oferta.cs" />
+    <Compile Include="OfertaControlador.cs" />
+    <Compile Include="ProductoControlador.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteControlador.cs" />
+    <Compile Include="Vendedor.cs" />
+    <Compile Include="VendedorControlador.cs" />
+    <EmbeddedResource Include="frmCatNegocios.resx">
+      <DependentUpon>frmCatNegocios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatOfertas.resx">
+      <DependentUpon>frmCatOfertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatProductos.resx">
+      <DependentUpon>frmCatProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmCatProductos1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatClientes.resx">
+      <DependentUpon>frmCatClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatVendedores.resx">
+      <DependentUpon>frmCatVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReseñarNegocio.resx">
+      <DependentUpon>frmReseñarNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionTipoUsuario.resx">
+      <DependentUpon>frmSeleccionTipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMenuPrincipal.resx">
+      <DependentUpon>MDIMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconografiaOfferStore\actualizar-usuario.png" />
+    <Content Include="IconografiaOfferStore\advertencia-de-triangulo.png" />
+    <Content Include="IconografiaOfferStore\agregar-documento.png" />
+    <Content Include="IconografiaOfferStore\agregar-usuario.png" />
+    <Content Include="IconografiaOfferStore\agregar-usuario16x16.png" />
+    <Content Include="IconografiaOfferStore\agregar.nuevo.png" />
+    <Content Include="IconografiaOfferStore\agregar.png" />
+    <Content Include="IconografiaOfferStore\basura.png" />
+    <Content Include="IconografiaOfferStore\borrar-usuario.png" />
+    <Content Include="IconografiaOfferStore\borrar-usuario16x16.png" />
+    <Content Include="IconografiaOfferStore\busqueda.png" />
+    <Content Include="IconografiaOfferStore\cerrar.png" />
+    <Content Include="IconografiaOfferStore\cesta-de-la-compra.png" />
+    <Content Include="IconografiaOfferStore\circulo-cruzado.png" />
+    <Content Include="IconografiaOfferStore\comentar-alt-editar.png" />
+    <Content Include="IconografiaOfferStore\comentario.png" />
+    <Content Include="IconografiaOfferStore\consultar-usuario.png" />
+    <Content Include="IconografiaOfferStore\corazon RELLLENO.png" />
+    <Content Include="IconografiaOfferStore\corazon SIN RELLENAR.png" />
+    <Content Include="IconografiaOfferStore\deshacer.png" />
+    <Content Include="IconografiaOfferStore\eliminar-tienda.png" />
+    <Content Include="IconografiaOfferStore\estrella RELLENA.png" />
+    <Content Include="IconografiaOfferStore\estrella SIN RELLENAR.png" />
+    <Content Include="IconografiaOfferStore\etiquetaoferta.png" />
+    <Content Include="IconografiaOfferStore\facebook.png" />
+    <Content Include="IconografiaOfferStore\googleIcono.png" />
+    <Content Include="IconografiaOfferStore\guardar-usuario.png" />
+    <Content Include="IconografiaOfferStore\hombre-empleado-alt.png" />
+    <Content Include="IconografiaOfferStore\hombre-empleado32X32.png" />
+    <Content Include="IconografiaOfferStore\lapiz-de-usuario.png" />
+    <Content Include="IconografiaOfferStore\lapiz.png" />
+    <Content Include="IconografiaOfferStore\Logo-OfferStore%281%29.png" />
+    <Content Include="IconografiaOfferStore\Logo-OfferStore.png" />
+    <Content Include="IconografiaOfferStore\Logo-OfferStoreBOTON.png" />
+    <Content Include="IconografiaOfferStore\marcador.png" />
+    <Content Include="IconografiaOfferStore\menu-hamburguesa.png" />
+    <Content Include="IconografiaOfferStore\modificar.png" />
+    <Content Include="IconografiaOfferStore\ojo.png" />
+    <Content Include="IconografiaOfferStore\reloj-cinco.png" />
+    <Content Include="IconografiaOfferStore\sobre.png" />
+    <Content Include="IconografiaOfferStore\tienda-alt.png" />
+    <Content Include="IconografiaOfferStore\tienda64x64-alt.png" />
+    <Content Include="IconografiaOfferStore\usuario.png" />
+    <Content Include="IconografiaOfferStore\usuario32X32.png" />
+    <Content Include="IconografiaOfferStore\usuario64X64.png" />
+    <Content Include="IconografiaOfferStore\usuarioAzul.png" />
+    <Content Include="Logo-OfferStore.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
