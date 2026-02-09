@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-using System.Net;
 
 namespace OfferStore
 {
@@ -14,7 +12,6 @@ namespace OfferStore
     {
         public NegocioComtrolador()
         {
-
         }
 
         public bool AgregarNegocio(Negocio negocio)
@@ -101,7 +98,7 @@ namespace OfferStore
                     conn.Open();
                 SqlCommand cmd = new SqlCommand("Eliminar_Negocio", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NegocioID", id);
+                cmd.Parameters.AddWithValue("@NegocioId", id);
 
                 cmd.ExecuteNonQuery();
                 return true;
@@ -116,7 +113,7 @@ namespace OfferStore
             SqlConnection conn = new SqlConnection(Conexion.strConexion);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             DataTable datos = new DataTable();
-            List<Negocio> negocios = new List<Negocio>();
+            List<Negocio> negocio = new List<Negocio>();
 
             try
             {
@@ -130,20 +127,20 @@ namespace OfferStore
                 {
                     foreach (DataRow fila in datos.Rows)
                     {
-                        negocios.Add(new Negocio
+                        negocio.Add(new Negocio
                         {
                             NegocioID = Convert.ToInt32(fila["NegocioID"]),
-                            NegocioNombre = fila["NegocioNombre"].ToString(),
-                            NegocioDescripcion = fila["NegocioDescripcion"].ToString(),
-                            NegocioTelefono = fila["NegocioTelefono"].ToString()
+                            NegocioNombre = fila["NegocioID"].ToString(),
+                           NegocioDescripcion = fila["@NegocioID"].ToString(),
+                            NegocioTelefono = fila["@NegocioID"].ToString()
                         });
                     }
                 }
-                return negocios;
+                return negocio;
             }
             catch
             {
-                return negocios;
+                return negocio;
             }
         }
     }

@@ -47,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,21 +64,17 @@
             this.ProductoNombre,
             this.ProductoCategoria});
             this.Grid.Location = new System.Drawing.Point(12, 269);
-            this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
-            this.Grid.ReadOnly = true;
             this.Grid.RowHeadersVisible = false;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(549, 131);
+            this.Grid.Size = new System.Drawing.Size(545, 169);
             this.Grid.TabIndex = 23;
-            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
             // ProductoID
             // 
             this.ProductoID.DataPropertyName = "ProductoID";
             this.ProductoID.HeaderText = "ID";
             this.ProductoID.Name = "ProductoID";
-            this.ProductoID.ReadOnly = true;
             this.ProductoID.Width = 50;
             // 
             // ProductoNombre
@@ -87,7 +82,6 @@
             this.ProductoNombre.DataPropertyName = "ProductoNombre";
             this.ProductoNombre.HeaderText = "Producto";
             this.ProductoNombre.Name = "ProductoNombre";
-            this.ProductoNombre.ReadOnly = true;
             this.ProductoNombre.Width = 230;
             // 
             // ProductoCategoria
@@ -95,7 +89,6 @@
             this.ProductoCategoria.DataPropertyName = "ProductoCategoria";
             this.ProductoCategoria.HeaderText = "Categoria";
             this.ProductoCategoria.Name = "ProductoCategoria";
-            this.ProductoCategoria.ReadOnly = true;
             this.ProductoCategoria.Width = 230;
             // 
             // label3
@@ -103,27 +96,27 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(314, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Categoria:";
+            this.label3.Text = "Categoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(313, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Producto:";
+            this.label2.Text = "Producto";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(314, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 20;
-            this.label1.Text = "ID:";
+            this.label1.Text = "ID";
             // 
             // txtNombre
             // 
@@ -138,7 +131,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 17;
-            this.txtID.Leave += new System.EventHandler(this.txtID_Leave_1);
             // 
             // btnCancelar
             // 
@@ -261,27 +253,12 @@
             this.cbCategoria.Size = new System.Drawing.Size(240, 21);
             this.cbCategoria.TabIndex = 27;
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(463, 408);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(98, 27);
-            this.btnRegresar.TabIndex = 28;
-            this.btnRegresar.Text = " Regresar";
-            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // frmCatProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(573, 447);
-            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -297,14 +274,11 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCatProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos - Offer Store";
-            this.Load += new System.EventHandler(this.frmCatProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -332,6 +306,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.Button btnRegresar;
     }
 }

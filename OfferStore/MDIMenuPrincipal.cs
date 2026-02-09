@@ -30,18 +30,21 @@ namespace OfferStore
         private void mnuClientes_Click(object sender, EventArgs e)
         {
             frmCatClientes catClientes = new frmCatClientes();
+            catClientes.MdiParent = this;
             catClientes.Show();
         }
 
         private void mnuNegocios_Click(object sender, EventArgs e)
         {
             frmCatNegocios catNegocios = new frmCatNegocios();
+            catNegocios.MdiParent = this;
             catNegocios.Show();
         }
 
         private void mnuProductos_Click(object sender, EventArgs e)
         {
             frmCatProductos catProductos = new frmCatProductos();
+            catProductos.MdiParent = this;
             catProductos.Show();
         }
 
@@ -49,6 +52,7 @@ namespace OfferStore
         {
 
             frmCatOfertas catOfertas = new frmCatOfertas();
+            catOfertas.MdiParent = this;
             catOfertas.Show();
 
         }
@@ -56,6 +60,7 @@ namespace OfferStore
         private void mnuEmpleados_Click(object sender, EventArgs e)
         {
             frmCatVendedores vendedores = new frmCatVendedores();
+            vendedores.MdiParent = this;
             vendedores.Show();
         }
 
@@ -76,48 +81,6 @@ namespace OfferStore
                 }
                 // Si elige "No", no se hace nada
             }
-        }
-
-        private void MDIMenuPrincipal_Load(object sender, EventArgs e)
-        {
-            foreach (Control ctl in this.Controls) 
-            {
-                if (ctl is MdiClient)
-                {
-                    ctl.BackColor = Color.WhiteSmoke;
-                }
-            }
-        }
-
-        //Ingresar mediante los botones del menú
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            frmCatClientes catClientes = new frmCatClientes();
-            catClientes.Show();
-        }
-
-        private void btnOfertas_Click(object sender, EventArgs e)
-        {
-            frmCatOfertas catOfertas = new frmCatOfertas();
-            catOfertas.Show();
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            frmCatProductos catProductos = new frmCatProductos();
-            catProductos.Show();
-        }
-
-        private void btnNegocios_Click(object sender, EventArgs e)
-        {
-            frmCatNegocios catNegocios = new frmCatNegocios();
-            catNegocios.Show();
-        }
-
-        private void btnVendedores_Click(object sender, EventArgs e)
-        {
-            frmCatVendedores catVendedores = new frmCatVendedores();
-            catVendedores.Show();
         }
     }
 }

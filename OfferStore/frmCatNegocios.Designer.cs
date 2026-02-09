@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatNegocios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -58,11 +58,10 @@
             // 
             // btnLogo
             // 
-            this.btnLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
-            this.btnLogo.Location = new System.Drawing.Point(70, 14);
+            this.btnLogo.Location = new System.Drawing.Point(69, 25);
             this.btnLogo.Name = "btnLogo";
             this.btnLogo.Size = new System.Drawing.Size(186, 75);
             this.btnLogo.TabIndex = 15;
@@ -71,10 +70,9 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(339, 14);
+            this.label1.Location = new System.Drawing.Point(338, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 17);
             this.label1.TabIndex = 16;
@@ -82,22 +80,19 @@
             // 
             // txtID
             // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(342, 33);
+            this.txtID.Location = new System.Drawing.Point(341, 44);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(40, 25);
             this.txtID.TabIndex = 17;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            this.txtID.Leave += new System.EventHandler(this.txtID_Leave_1);
             // 
             // txtNombreNegocio
             // 
-            this.txtNombreNegocio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreNegocio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreNegocio.Location = new System.Drawing.Point(396, 33);
+            this.txtNombreNegocio.Location = new System.Drawing.Point(395, 44);
             this.txtNombreNegocio.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreNegocio.Name = "txtNombreNegocio";
             this.txtNombreNegocio.Size = new System.Drawing.Size(519, 25);
@@ -105,10 +100,9 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 14);
+            this.label2.Location = new System.Drawing.Point(392, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 17);
             this.label2.TabIndex = 19;
@@ -116,10 +110,9 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 67);
+            this.label3.Location = new System.Drawing.Point(337, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 20;
@@ -127,9 +120,8 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(341, 86);
+            this.txtTelefono.Location = new System.Drawing.Point(340, 97);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(574, 25);
@@ -137,10 +129,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(28, 260);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 325);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(98, 27);
             this.btnAgregar.TabIndex = 24;
@@ -152,10 +143,9 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.Location = new System.Drawing.Point(225, 260);
+            this.btnConsultar.Location = new System.Drawing.Point(213, 325);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(98, 27);
             this.btnConsultar.TabIndex = 25;
@@ -167,10 +157,9 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(422, 260);
+            this.btnModificar.Location = new System.Drawing.Point(414, 325);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(98, 27);
             this.btnModificar.TabIndex = 26;
@@ -182,10 +171,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(619, 260);
+            this.btnEliminar.Location = new System.Drawing.Point(615, 325);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(98, 27);
             this.btnEliminar.TabIndex = 27;
@@ -197,10 +185,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(816, 260);
+            this.btnCancelar.Location = new System.Drawing.Point(816, 325);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 27);
             this.btnCancelar.TabIndex = 28;
@@ -217,28 +204,27 @@
             this.Grid.AllowUserToResizeRows = false;
             this.Grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(150)))), ((int)(((byte)(244)))));
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NegocioID,
             this.NegocioNombre,
             this.NegocioTelefono,
             this.NegocioDescripcion});
-            this.Grid.Location = new System.Drawing.Point(28, 303);
+            this.Grid.Location = new System.Drawing.Point(12, 379);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.RowHeadersVisible = false;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(886, 150);
+            this.Grid.Size = new System.Drawing.Size(903, 150);
             this.Grid.TabIndex = 29;
-            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
             // 
             // NegocioID
@@ -271,14 +257,13 @@
             this.NegocioDescripcion.HeaderText = "Descripción";
             this.NegocioDescripcion.Name = "NegocioDescripcion";
             this.NegocioDescripcion.ReadOnly = true;
-            this.NegocioDescripcion.Width = 425;
+            this.NegocioDescripcion.Width = 420;
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegresar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(816, 475);
+            this.btnRegresar.Location = new System.Drawing.Point(817, 544);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(98, 27);
             this.btnRegresar.TabIndex = 30;
@@ -290,10 +275,9 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(339, 124);
+            this.label4.Location = new System.Drawing.Point(338, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 32;
@@ -301,20 +285,18 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(341, 143);
+            this.txtDescripcion.Location = new System.Drawing.Point(340, 154);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(573, 92);
+            this.txtDescripcion.Size = new System.Drawing.Size(573, 147);
             this.txtDescripcion.TabIndex = 31;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 172);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -323,10 +305,9 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(141, 136);
+            this.label7.Location = new System.Drawing.Point(132, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 30);
             this.label7.TabIndex = 65;
@@ -337,7 +318,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(929, 519);
+            this.ClientSize = new System.Drawing.Size(927, 583);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -356,14 +337,12 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCatNegocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Negocios - Offer Store";
-            this.Load += new System.EventHandler(this.frmCatNegocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -389,11 +368,11 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn NegocioID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NegocioNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn NegocioTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn NegocioDescripcion;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

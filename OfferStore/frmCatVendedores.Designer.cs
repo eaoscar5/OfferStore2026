@@ -34,9 +34,6 @@ namespace OfferStore
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatVendedores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelVendedores = new System.Windows.Forms.Label();
             this.txtTienda = new System.Windows.Forms.TextBox();
@@ -44,6 +41,10 @@ namespace OfferStore
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLogo = new System.Windows.Forms.Button();
             this.Grid = new System.Windows.Forms.DataGridView();
+            this.Ven_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ven_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ven_Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ven_Tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -55,10 +56,6 @@ namespace OfferStore
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Ven_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ven_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ven_Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ven_Tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +83,7 @@ namespace OfferStore
             // txtTienda
             // 
             this.txtTienda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienda.Location = new System.Drawing.Point(265, 145);
+            this.txtTienda.Location = new System.Drawing.Point(265, 136);
             this.txtTienda.Margin = new System.Windows.Forms.Padding(2);
             this.txtTienda.Name = "txtTienda";
             this.txtTienda.Size = new System.Drawing.Size(528, 25);
@@ -137,8 +134,6 @@ namespace OfferStore
             this.Grid.AllowUserToAddRows = false;
             this.Grid.AllowUserToDeleteRows = false;
             this.Grid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(150)))), ((int)(((byte)(244)))));
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -153,9 +148,49 @@ namespace OfferStore
             this.Grid.RowHeadersVisible = false;
             this.Grid.RowHeadersWidth = 51;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(791, 150);
+            this.Grid.Size = new System.Drawing.Size(785, 150);
             this.Grid.TabIndex = 31;
             this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
+            // 
+            // Ven_Id
+            // 
+            this.Ven_Id.DataPropertyName = "Ven_Id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ven_Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Ven_Id.HeaderText = "ID";
+            this.Ven_Id.MinimumWidth = 6;
+            this.Ven_Id.Name = "Ven_Id";
+            this.Ven_Id.ReadOnly = true;
+            this.Ven_Id.Width = 80;
+            // 
+            // Ven_Nombre
+            // 
+            this.Ven_Nombre.DataPropertyName = "Ven_Nombre";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ven_Nombre.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Ven_Nombre.HeaderText = "Nombre";
+            this.Ven_Nombre.MinimumWidth = 6;
+            this.Ven_Nombre.Name = "Ven_Nombre";
+            this.Ven_Nombre.ReadOnly = true;
+            this.Ven_Nombre.Width = 250;
+            // 
+            // Ven_Correo
+            // 
+            this.Ven_Correo.DataPropertyName = "Ven_Correo";
+            this.Ven_Correo.HeaderText = "Correo";
+            this.Ven_Correo.MinimumWidth = 6;
+            this.Ven_Correo.Name = "Ven_Correo";
+            this.Ven_Correo.ReadOnly = true;
+            this.Ven_Correo.Width = 250;
+            // 
+            // Ven_Tienda
+            // 
+            this.Ven_Tienda.DataPropertyName = "Ven_Tienda";
+            this.Ven_Tienda.HeaderText = "Tienda";
+            this.Ven_Tienda.MinimumWidth = 6;
+            this.Ven_Tienda.Name = "Ven_Tienda";
+            this.Ven_Tienda.ReadOnly = true;
+            this.Ven_Tienda.Width = 200;
             // 
             // btnEliminar
             // 
@@ -216,18 +251,17 @@ namespace OfferStore
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(262, 126);
+            this.label4.Location = new System.Drawing.Point(262, 117);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "Tienda:";
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(265, 87);
+            this.txtCorreo.Location = new System.Drawing.Point(265, 78);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(528, 25);
@@ -236,18 +270,17 @@ namespace OfferStore
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(262, 68);
+            this.label3.Location = new System.Drawing.Point(262, 59);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 15);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Correo electrónico:";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(353, 29);
+            this.txtNombre.Location = new System.Drawing.Point(353, 20);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(440, 25);
@@ -256,7 +289,7 @@ namespace OfferStore
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(265, 29);
+            this.txtID.Location = new System.Drawing.Point(265, 20);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(67, 25);
@@ -267,68 +300,22 @@ namespace OfferStore
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(350, 10);
+            this.label2.Location = new System.Drawing.Point(350, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 15);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Nombre completo:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(262, 10);
+            this.label1.Location = new System.Drawing.Point(262, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 15);
+            this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID:";
-            // 
-            // Ven_Id
-            // 
-            this.Ven_Id.DataPropertyName = "Ven_Id";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ven_Id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Ven_Id.HeaderText = "ID";
-            this.Ven_Id.MinimumWidth = 6;
-            this.Ven_Id.Name = "Ven_Id";
-            this.Ven_Id.ReadOnly = true;
-            this.Ven_Id.Width = 80;
-            // 
-            // Ven_Nombre
-            // 
-            this.Ven_Nombre.DataPropertyName = "Ven_Nombre";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ven_Nombre.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Ven_Nombre.HeaderText = "Nombre";
-            this.Ven_Nombre.MinimumWidth = 6;
-            this.Ven_Nombre.Name = "Ven_Nombre";
-            this.Ven_Nombre.ReadOnly = true;
-            this.Ven_Nombre.Width = 250;
-            // 
-            // Ven_Correo
-            // 
-            this.Ven_Correo.DataPropertyName = "Ven_Correo";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ven_Correo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Ven_Correo.HeaderText = "Correo";
-            this.Ven_Correo.MinimumWidth = 6;
-            this.Ven_Correo.Name = "Ven_Correo";
-            this.Ven_Correo.ReadOnly = true;
-            this.Ven_Correo.Width = 250;
-            // 
-            // Ven_Tienda
-            // 
-            this.Ven_Tienda.DataPropertyName = "Ven_Tienda";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ven_Tienda.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Ven_Tienda.HeaderText = "Tienda";
-            this.Ven_Tienda.MinimumWidth = 6;
-            this.Ven_Tienda.Name = "Ven_Tienda";
-            this.Ven_Tienda.ReadOnly = true;
-            this.Ven_Tienda.Width = 200;
             // 
             // frmCatVendedores
             // 
@@ -353,11 +340,7 @@ namespace OfferStore
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmCatVendedores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCatVendedores";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCatVendedores_FormClosed);
             this.Load += new System.EventHandler(this.frmCatVendedores_Load);
@@ -394,9 +377,9 @@ namespace OfferStore
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DataGridViewTextBoxColumn Ven_Id;
-        private DataGridViewTextBoxColumn Ven_Nombre;
-        private DataGridViewTextBoxColumn Ven_Correo;
-        private DataGridViewTextBoxColumn Ven_Tienda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ven_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ven_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ven_Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ven_Tienda;
     }
 }

@@ -21,6 +21,7 @@ namespace OfferStore
         public frmCatProductos()
         {
             InitializeComponent();
+            llenarGrid(); // Cargar productos al iniciar
         }
 
         // ------------------ Métodos del formulario ------------------
@@ -235,49 +236,6 @@ namespace OfferStore
         private void btnLogo_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void frmCatProductos_Load(object sender, EventArgs e)
-        {
-            llenarGrid(); // Cargar productos al iniciar
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex >= 0 && Grid.Rows.Count > 0)
-                {
-                    txtID.Enabled = false;
-                    txtID.Text = Grid.Rows[e.RowIndex].Cells["ProductoID"].Value.ToString();
-
-                    txtNombre.Text = Grid.Rows[e.RowIndex].Cells["ProductoNombre"].Value.ToString();
-
-                    cbCategoria.Text = Grid.Rows[e.RowIndex].Cells["ProductoCategoria"].Value.ToString();
-
-                }
-            }
-            catch
-            {
-
-            }
-
-        }
-        private void txtID_Leave_1(object sender, EventArgs e)
-        {
-            try
-            {
-                LlenarForma(Convert.ToInt32(txtID.Text));
-            }
-            catch
-            {
-                txtID.Text = "";
-            }
         }
     }
 }

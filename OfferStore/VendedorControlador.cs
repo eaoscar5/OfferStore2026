@@ -132,14 +132,14 @@ namespace OfferStore
 
                 if (datos.Rows.Count > 0)
                 {
-                    foreach (DataRow fila in datos.Rows)
+                    for (int i = 0; i < datos.Rows.Count; i++)
                     {
                         vendedores.Add(new Vendedor
                         {
-                            Ven_id = Convert.ToInt32(fila["Ven_Id"]),
-                            Ven_nombre = fila["Ven_Nombre"].ToString(),
-                            Ven_correo = fila["Ven_Correo"].ToString(),
-                            Ven_tienda = fila["Ven_Tienda"].ToString()
+                            Ven_id = Convert.ToInt32(datos.Rows[i].ItemArray[0]),
+                            Ven_nombre = datos.Rows[0].ItemArray[1].ToString(),
+                            Ven_correo = datos.Rows[0].ItemArray[2].ToString(),
+                            Ven_tienda = datos.Rows[0].ItemArray[3].ToString()
                         }
                         );
                     }

@@ -45,7 +45,10 @@ namespace OfferStore
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            LimpiarCampos();
+            txtID.Text = "";
+            txtNombreNegocio.Text = "";
+            txtTelefono.Text = "";
+            txtDescripcion.Text = "";
            
         }
 
@@ -123,8 +126,23 @@ namespace OfferStore
         private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
+            try
+            {
+                if (e.RowIndex >= 0 && Grid.Rows.Count > 0)
+                {
+                    txtID.Enabled = false;
+                    txtID.Text = Grid.Rows[e.RowIndex].Cells["NegocioID"].Value.ToString();
+                    txtNombreNegocio.Text = Grid.Rows[e.RowIndex].Cells["NegocioNombre"].Value.ToString();
+                    txtDescripcion.Text = Grid.Rows[e.RowIndex].Cells["Negociodescripcion"].Value.ToString();
+                    txtTelefono.Text = Grid.Rows[e.RowIndex].Cells["NegocioTelefono"].Value.ToString();
 
+                }
+            }
+            catch
+            {
+
+            }
+        }
         void LlenarForma(int id)
         {
             Negocio negocio = controlador.ConsultarNegocio(id);
@@ -155,7 +173,7 @@ namespace OfferStore
             bool eliminar = false;
             int id = Convert.ToInt32(txtID.Text);
 
-            if (!string.IsNullOrEmpty(txtID.Text))
+            if (txtID.Enabled == false)
             {
                 if (MessageBox.Show("¿Desea eliminar al negocio?", "Eliminar negocio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -276,45 +294,6 @@ namespace OfferStore
                     this.Hide();
                 }
                 // Si elige "No", no se hace nada
-            }
-        }
-
-        private void frmCatNegocios_Load(object sender, EventArgs e)
-        {
-            llenarGrid();
-        }
-
-        private void txtID_Leave_1(object sender, EventArgs e)
-        {
-            try
-            {
-                LlenarForma(Convert.ToInt32(txtID.Text));
-            }
-            catch
-            {
-                txtID.Text = "";
-            }
-        }
-
-        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            try
-            {
-                if (e.RowIndex >= 0 && Grid.Rows.Count > 0)
-                {
-                    txtID.Enabled = false;
-
-                    txtID.Text = Grid.Rows[e.RowIndex].Cells["NegocioID"].Value.ToString();
-                    txtNombreNegocio.Text = Grid.Rows[e.RowIndex].Cells["NegocioNombre"].Value.ToString();
-                    txtDescripcion.Text = Grid.Rows[e.RowIndex].Cells["NegocioDescripcion"].Value.ToString();
-                    txtTelefono.Text = Grid.Rows[e.RowIndex].Cells["NegocioTelefono"].Value.ToString();
-
-                }
-            }
-            catch
-            {
-
             }
         }
     }

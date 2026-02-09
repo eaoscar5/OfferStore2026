@@ -250,32 +250,13 @@ namespace OfferStore
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Validar campos
             if (string.IsNullOrEmpty(txtID.Text.Trim()))
             {
                 MessageBox.Show("Favor de ingresar ID.", "Modificar cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtID.Focus();
                 return;
             }
-            if (txtNombre.Text.Trim() == "")
-            {
-                MessageBox.Show("Favor de ingresar nombre", "Agregar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtNombre.Focus();
-                return;
-            }
-            if (txtCorreo.Text.Trim() == "")
-            {
-                MessageBox.Show("Favor de ingresar correo", "Agregar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtCorreo.Focus();
-                return;
-            }
-            if (txtPass.Text.Trim() == "")
-            {
-                MessageBox.Show("Favor de ingresar contraseña", "Agregar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPass.Focus();
-                return;
-            }
-
+            
             try
             {
                 int id = Convert.ToInt32(txtID.Text);
@@ -332,14 +313,9 @@ namespace OfferStore
                 // Si elige "No", no se hace nada
             }
         }
-
-        private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         //bool ExisteCorreo(string correo)
         //{
-
+           
         //}
     }
 }

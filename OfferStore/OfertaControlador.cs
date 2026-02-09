@@ -41,15 +41,13 @@ namespace OfferStore
         {
             try
             {
-                
                 SqlConnection conn = new SqlConnection(Conexion.strConexion);
                 if (conn.State == 0)
                     conn.Open();
                 SqlCommand cmd = new SqlCommand("Actualizar_Oferta", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@OfertaID", oferta.OfertaID);
                 cmd.Parameters.AddWithValue("@OfertaPrecio", oferta.OfertaPrecio);
-                cmd.Parameters.AddWithValue("@OfertaDescuento", oferta.OfertaDescuento);
+                cmd.Parameters.AddWithValue("@OfertaaDescuento", oferta.OfertaDescuento);
                 cmd.Parameters.AddWithValue("@ProductoID", oferta.ProductoID);
                 cmd.Parameters.AddWithValue("@NegocioID", oferta.NegocioID);
                 cmd.ExecuteNonQuery();
@@ -81,10 +79,10 @@ namespace OfferStore
                     oferta = new Oferta
                     {
                         OfertaID = Convert.ToInt32(datos.Rows[0]["OfertaID"]),
-                        OfertaPrecio = Convert.ToDouble(datos.Rows[0]["OfertaPrecio"]),
                         OfertaDescuento = Convert.ToDouble(datos.Rows[0]["OfertaDescuento"]),
-                        ProductoID = Convert.ToInt32(datos.Rows[0]["ProductoID"]),
-                        NegocioID = Convert.ToInt32(datos.Rows[0]["NegocioID"])
+                        OfertaPrecio = Convert.ToDouble(datos.Rows[0]["OfertaID"]),
+                        ProductoID = Convert.ToInt32(datos.Rows[0]["OfertaID"]),
+                        NegocioID = Convert.ToInt32(datos.Rows[0]["OfertaID"])
                     };
                 }
                 return oferta;
@@ -94,7 +92,7 @@ namespace OfferStore
                 return oferta;
             }
         }
-        public bool EliminarOferta(int id)
+        public bool EliminarCliente(int id)
         {
             try
             {
@@ -137,8 +135,8 @@ namespace OfferStore
                             OfertaID = Convert.ToInt32(fila["OfertaID"]),
                             OfertaPrecio = Convert.ToDouble(fila["OfertaPrecio"]),
                             OfertaDescuento = Convert.ToDouble(fila["OfertaDescuento"]),
-                            ProductoID = Convert.ToInt32(fila["ProductoID"]),
-                            NegocioID = Convert.ToInt32(fila["NegocioID"]),
+                            ProductoID = Convert.ToInt32(fila["OfertaID"]),
+                            NegocioID = Convert.ToInt32(fila["OfertaID"]),
                         });
                     }
                 }
